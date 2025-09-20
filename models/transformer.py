@@ -1,5 +1,4 @@
-from torch import nn
-from torch import Tensor
+from torch import nn, Tensor
 
 class TransformerBlock(nn.Module):
     def __init__(self, hidden_size: int, num_heads: int, num_layers: int):
