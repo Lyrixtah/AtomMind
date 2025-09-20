@@ -41,7 +41,7 @@
 
 ---
 
-## OpenRouter Integration
+## Multi-Agent Integration
 
 **Multi-agent Meta-controller**, orchestrating training, evaluation, and dataset generation. Key agent roles:
 
