@@ -22,4 +22,13 @@ class TransformerBlock(nn.Module):
         self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
 
     def forward(self, x: Tensor) -> Tensor:
+        """
+        Forward pass for the TransformerBlock.
+
+        Args:
+            x (Tensor): Input tensor of shape [batch, seq_len, hidden_size].
+
+        Returns:
+            Tensor: Output tensor of the same shape as input.
+        """
         return self.transformer(x)
