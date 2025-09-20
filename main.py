@@ -22,9 +22,9 @@ embedding_layer = Embedding(tokenizer.vocab_size, HIDDEN_SIZE).to(DEVICE)
 
 optimizer = torch.optim.AdamW(slm.parameters(), lr=1e-4)
 
-# Features
-train_chat = True
-stable_start = True
+# Features (Customizable)
+train_chat = True # Set False if just need to gather knowledge
+stable_start = False # Set True if model training is complete and starting to fine-tuning
 warmup_epochs = 3
 max_grad_norm = 1.0
 
