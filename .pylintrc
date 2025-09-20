@@ -2,4 +2,4 @@
 ignore=tests
 
 [MESSAGES CONTROL]
-disable = duplicate-code, broad-exception-caught
+disable = duplicate-code, broad-exception-caught, invalid-name
