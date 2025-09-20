@@ -3,8 +3,8 @@ Defines SmallScientificLLM, a transformer-based model that integrates domain exp
 networks, a general knowledge backbone, symbolic reasoning, optimization, and chat expert modules.
 """
 
-import torch
 from typing import Dict, Optional
+import torch
 from torch import nn, Tensor
 from models.den import DomainExpertNetwork
 from models.gkb import GeneralKnowledgeBackbone
