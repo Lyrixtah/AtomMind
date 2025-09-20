@@ -11,7 +11,7 @@ numpy>=1.25.0
 tqdm>=4.66.0
 
 # Logging / Debugging
-rich>=14.8.0
+rich>=14.0.0
 
 # Optional: for OpenRouter / API fetching tasks
 requests>=2.32.0
