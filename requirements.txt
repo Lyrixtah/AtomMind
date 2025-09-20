@@ -17,4 +17,4 @@ rich>=14.0.0
 requests>=2.32.0
 
 # Optional: if using plotting/analysis
-matplotlib>=3.9.0
+matplotlib>=3.7.5
