@@ -1,5 +1,7 @@
 <div align="center"> <h1> AtomMind: Small Scientific Language Model (SsLM) </h1>
 
+<image src="docs/public/AtomMind.png" width="20%" height="20%"/>
+
 **AtomMind** is a modular, domain-specialized **Small Language Model** designed to perform reasoning, and computation across **Mathematics, Physics, Chemistry, and Biology**. 
 
 *Unlike general-purpose LLMs, AtomMind just focuses on deep logical reasoning, symbolic computation, and cross-domain scientific problem-solving. Therefore it's lighter, dont cost much and more effective*
