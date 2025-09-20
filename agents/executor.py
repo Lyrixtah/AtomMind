@@ -19,7 +19,7 @@ class ExecutorAgent:
             "temperature": 0.7,
             "max_tokens": 150
         }
-        response = requests.post(self.base_url, json=params, headers=headers)
+        response = requests.post(self.base_url, json=params, headers=headers, timeout=10)
         response.raise_for_status()
         choices = response.json().get("choices", [])
         candidates = [choice["message"]["content"] for choice in choices[:num_candidates]]

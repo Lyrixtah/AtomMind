@@ -9,6 +9,7 @@ DEN_LAYERS = 30
 GKB_LAYERS = 20
 SRM_LAYERS = 10
 OAM_LAYERS = 10
+MAX_SEQ_LEN = 512
 
 # Training
 BATCH_SIZE = 4
@@ -21,3 +22,4 @@ DOMAINS = ["math", "physics", "chemistry", "biology"]
 # Paths
 DATA_PATH = "./data/"
 LOG_PATH = "./logs/"
+SAVE_PATH = "./checkpoints/"

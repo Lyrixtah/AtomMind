@@ -1,4 +1,8 @@
+import os
+
 import torch
+from torch.nn import Embedding
+
 from config import DEVICE, EPOCHS, MAX_SEQ_LEN, HIDDEN_SIZE, DOMAINS, SAVE_PATH
 from tokenizer import tokenizer
 from models.slm import SmallScientificLLM
@@ -8,8 +12,7 @@ from agents.critic import CriticAgent
 from agents.consensus import consensus
 from agents.trainer import TrainerAgent
 from utils.logger import Logger
-from torch.nn import Embedding
-import os
+
 
 # Initialize modules
 logger = Logger()
@@ -41,7 +44,7 @@ for epoch in range(EPOCHS):
     # Automatic Science Tasks
     try:
         auto_tasks = executor.generate_candidates(
-            prompt="Generate a scientific task/problem in math, physics, chemistry, or biology.", 
+            prompt="Generate a scientific task/problem in math, physics, chemistry, or biology.",
             num_candidates=5
         )
     except Exception as e:

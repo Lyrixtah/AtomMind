@@ -10,6 +10,6 @@ def load_dataset():
         if os.path.exists(path):
             for f in os.listdir(path):
                 if f.endswith(".json"):
-                    with open(os.path.join(path, f), "r") as fin:
+                    with open(path, "r", encoding="utf-8") as fin:
                         dataset[domain].append(json.load(fin))
     return dataset
