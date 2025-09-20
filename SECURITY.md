@@ -17,7 +17,7 @@ This project follows a version support policy for security updates. Only the lis
 
 If you discover a security issue, please follow these steps to report it responsibly:
 
-1. **Email:** Send details to **security@yourdomain.com** (preferred method).  
+1. **Email:** Send details to **atommind-ai@googlegroups.com** (preferred method).  
 2. **Include:**  
    - Description of the vulnerability  
    - Steps to reproduce  
