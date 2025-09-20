@@ -73,7 +73,13 @@
 - Symbolic equation solving and computation  
 - Cross-domain integration and predictions  
 - Efficient learning from curated datasets  
-- Continual self-monitoring and improvement  
+- Continual self-monitoring and improvement
+
+---
+
+## Project Status
+
+![Repobeats Analytics Image](https://repobeats.axiom.co/api/embed/a69cd0f5c278e377eee81766650460ae4196cfb8.svg "Repobeats analytics image")
 
 ---
 
