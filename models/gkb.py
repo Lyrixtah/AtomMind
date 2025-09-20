@@ -2,9 +2,10 @@
 Defines the GeneralKnowledgeBackbone (GKB), a transformer-based module for general knowledge representation.
 """
 
+from typing import List
 from torch import nn, Tensor
 import torch
-from typing import List
+from models.transformer import TransformerBlock
 
 class GeneralKnowledgeBackbone(nn.Module):
     """
@@ -18,15 +19,7 @@ class GeneralKnowledgeBackbone(nn.Module):
 
     def __init__(self, hidden_size: int, num_layers: int, num_heads: int) -> None:
         super().__init__()
-        encoder_layer = nn.TransformerEncoderLayer(
-            d_model=hidden_size,
-            nhead=num_heads,
-            dim_feedforward=hidden_size * 4,
-            dropout=0.1,
-            activation='relu',
-            batch_first=True  # input/output: [batch, seq_len, hidden_size]
-        )
-        self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+        self.transformer = TransformerBlock(hidden_size, num_heads, num_layers)
 
     def forward(self, domain_outputs: List[Tensor]) -> Tensor:
         """

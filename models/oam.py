@@ -3,6 +3,7 @@ Defines the OptimizationAlgorithmModule (OAM), a transformer-based module for op
 """
 
 from torch import nn, Tensor
+from models.transformer import TransformerBlock
 
 class OptimizationAlgorithmModule(nn.Module):
     """
@@ -16,15 +17,7 @@ class OptimizationAlgorithmModule(nn.Module):
 
     def __init__(self, hidden_size: int, num_layers: int, num_heads: int) -> None:
         super().__init__()
-        encoder_layer = nn.TransformerEncoderLayer(
-            d_model=hidden_size,
-            nhead=num_heads,
-            dim_feedforward=hidden_size * 4,
-            dropout=0.1,
-            activation='relu',
-            batch_first=True
-        )
-        self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+        self.transformer = TransformerBlock(hidden_size, num_heads, num_layers)
 
     def forward(self, x: Tensor) -> Tensor:
         """
