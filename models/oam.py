@@ -1,5 +1,6 @@
 """
-Defines the OptimizationAlgorithmModule (OAM), a transformer-based module for optimization reasoning.
+Defines the OptimizationAlgorithmModule (OAM)
+A transformer-based module for optimization reasoning.
 """
 
 from torch import nn, Tensor
