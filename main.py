@@ -105,9 +105,9 @@ for epoch in range(EPOCHS):
                     [chat_tokens, torch.zeros(1, pad_len, dtype=torch.long).to(DEVICE)],
                     dim=1
                 )
-            CHAT_TENSOR = embedding_layer(chat_tokens)
+            chat_tensor = embedding_layer(chat_tokens)
 
-        output = slm(x_dict, CHAT_TENSOR)
+        output = slm(x_dict, chat_tensor)
         loss_mse = ((output[:, :input_tensor.size(1), :] - input_tensor) ** 2).mean()
 
         if STABLE_START and epoch < WARMUP_EPOCHS:
