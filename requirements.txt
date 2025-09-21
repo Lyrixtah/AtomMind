@@ -1,10 +1,6 @@
-# Common packages
-numpy==1.25.2
+numpy==1.25.2; python_version < "3.12"
+numpy==1.26.0rc2; python_version >= "3.12"
 transformers==4.56.2
 pytest==8.4.2
 python-dotenv==1.1.1
 requests==2.32.5
-
-# PyTorch by Python version
-torch==2.8.0; python_version < "3.12"
-torch --pre --index-url https://download.pytorch.org/whl/nightly/cpu; python_version >= "3.12"
