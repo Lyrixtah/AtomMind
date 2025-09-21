@@ -42,6 +42,7 @@ class ExecutorAgent:
             "messages": messages,
             "temperature": 0.7,
             "max_tokens": 150,
+            "n": num_candidates
         }
         response = requests.post(
             self.base_url, json=params, headers=headers, timeout=10
