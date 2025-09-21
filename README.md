@@ -73,7 +73,13 @@
 - Symbolic equation solving and computation  
 - Cross-domain integration and predictions  
 - Efficient learning from curated datasets  
-- Continual self-monitoring and improvement  
+- Continual self-monitoring and improvement
+
+---
+
+## Project Status
+
+![Repobeats Analytics Image](https://repobeats.axiom.co/api/embed/a69cd0f5c278e377eee81766650460ae4196cfb8.svg "Repobeats analytics image")
 
 ---
 
@@ -85,8 +91,8 @@
 
 For questions, collaboration, or contributions, you can reach out via:
 
-- **GitHub:** [@Iro96](https://github.com/iro96)  
-- **Email:** [bruh8080p@gmail.com](mailto:bruh8080p@gmail.com)  
+- **GitHub:** [AtomMind-Ai](https://github.com/AtomMind-Ai)  
+- **Email:** [atommind-ai@googlegroups.com](mailto:atommind-ai@googlegroups.com)  
 
 > **Feel free to open issues or pull requests on GitHub for discussion and contributions.**
 
