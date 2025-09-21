@@ -3,4 +3,4 @@ ignore=tests
 
 [MESSAGES CONTROL]
 # missing-module-docstring, missing-class-docstring, missing-function-docstring, line-too-long
-disable = import-error, invalid-name, broad-exception-caught, too-few-public-methods
+disable = invalid-name, broad-exception-caught, too-few-public-methods
