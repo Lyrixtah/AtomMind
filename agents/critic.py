@@ -7,7 +7,6 @@ import re
 
 import torch
 from torch.nn import Embedding
-import numpy as np
 
 from models.slm import SmallScientificLLM
 from tokenizer import tokenizer
