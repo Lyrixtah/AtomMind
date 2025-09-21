@@ -17,6 +17,8 @@ class ExecutorAgent:
     def __init__(self) -> None:
         """Initialize the ExecutorAgent with API key and base URL."""
         self.api_key = os.getenv("OPENROUTER_API_KEY")
+        if not self.api_key:
+            raise ValueError("OPENROUTER_API_KEY environment variable not set.")
         self.base_url = "https://openrouter.ai/api/v1/chat/completions"
 
     def generate_candidates(self, prompt: str, num_candidates: int = 3) -> List[str]:
