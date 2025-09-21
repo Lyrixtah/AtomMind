@@ -1,7 +1,7 @@
 """CriticAgent module for evaluating candidate outputs."""
 
 import random
-from typing import List
+from typing import List, Dict
 
 class CriticAgent:
     """
