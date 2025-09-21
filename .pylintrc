@@ -2,4 +2,5 @@
 ignore=tests
 
 [MESSAGES CONTROL]
-disable = broad-exception-caught, invalid-name, missing-module-docstring, missing-class-docstring, missing-function-docstring, line-too-long, too-few-public-methods
+# missing-module-docstring, missing-class-docstring, missing-function-docstring, line-too-long
+disable = invalid-name, broad-exception-caught, too-few-public-methods

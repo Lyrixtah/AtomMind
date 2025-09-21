@@ -1,6 +1,6 @@
 """
-Defines the ChatExpertNetwork, a transformer-based expert network for
-processing chat sequences.
+Defines the ChatExpertNetwork (CEN)
+A transformer-based expert network for processing chat sequences.
 """
 
 from torch import nn
@@ -9,8 +9,8 @@ from config import HIDDEN_SIZE, CEN_LAYERS, NUM_ATTENTION_HEADS
 
 class ChatExpertNetwork(nn.Module):
     """
-    ChatExpertNetwork applies a stack of TransformerEncoder layers to
-    input chat embeddings.
+    ChatExpertNetwork applies a stack of 
+    TransformerEncoder layers to input chat embeddings.
 
     Attributes:
         transformer (nn.TransformerEncoder): Transformer encoder stack.
