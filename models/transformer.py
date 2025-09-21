@@ -13,14 +13,6 @@ class TransformerBlock(nn.Module):
     """
 
     def __init__(self, hidden_size: int, num_heads: int, num_layers: int):
-        """
-        Initializes the TransformerBlock.
-
-        Args:
-            hidden_size (int): The number of expected features in the input.
-            num_heads (int): The number of heads in the multiheadattention models.
-            num_layers (int): The number of sub-encoder-layers in the encoder.
-        """
         super().__init__()
         encoder_layer = nn.TransformerEncoderLayer(
             d_model=hidden_size,
@@ -33,4 +25,13 @@ class TransformerBlock(nn.Module):
         self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
 
     def forward(self, x: Tensor) -> Tensor:
+        """
+        Forward pass through the Transformer block.
+
+        Args:
+            x (Tensor): Input tensor of shape [batch, seq_len, hidden_size].
+        
+        Returns:
+            Tensor: Output tensor of same shape as input.
+        """
         return self.transformer(x)
