@@ -1,5 +1,6 @@
 """
-Defines the DomainExpertNetwork (DEN) using a Transformer encoder for domain-specific embeddings.
+Defines the DomainExpertNetwork (DEN) 
+Using a Transformer encoder for domain-specific embeddings.
 """
 
 from torch import nn, Tensor
@@ -7,7 +8,8 @@ from models.transformer import TransformerBlock
 
 class DomainExpertNetwork(nn.Module):
     """
-    DomainExpertNetwork applies a TransformerEncoder to domain-specific input embeddings.
+    DomainExpertNetwork applies a TransformerEncoder 
+    to domain-specific input embeddings.
 
     Args:
         hidden_size (int): Dimensionality of input embeddings.
@@ -23,8 +25,8 @@ class DomainExpertNetwork(nn.Module):
         """
         Forward pass through the transformer.
 
-        Args: x (Tensor):
-            Input tensor of shape [batch, seq_len, hidden_size].
+        Args:
+            x (Tensor): Input tensor of shape [batch, seq_len, hidden_size].
         Returns:
             Tensor: Output tensor of shape [batch, seq_len, hidden_size].
         """

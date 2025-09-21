@@ -1,15 +1,18 @@
+"""Defines a reusable Transformer block for sequence processing."""
+
 from torch import nn, Tensor
 
 class TransformerBlock(nn.Module):
-    def __init__(self, hidden_size: int, num_heads: int, num_layers: int):
-        """
-        Initializes the TransformerBlock.
+    """
+    TransformerBlock wraps a stack of TransformerEncoder layers.
 
-        Args:
-            hidden_size (int): The number of expected features in the input.
-            num_heads (int): The number of heads in the multiheadattention models.
-            num_layers (int): The number of sub-encoder-layers in the encoder.
-        """
+    Args:
+        hidden_size (int): Dimensionality of input embeddings.
+        num_heads (int): Number of attention heads per layer.
+        num_layers (int): Number of TransformerEncoder layers.
+    """
+
+    def __init__(self, hidden_size: int, num_heads: int, num_layers: int):
         super().__init__()
         encoder_layer = nn.TransformerEncoderLayer(
             d_model=hidden_size,
@@ -23,12 +26,12 @@ class TransformerBlock(nn.Module):
 
     def forward(self, x: Tensor) -> Tensor:
         """
-        Forward pass for the TransformerBlock.
+        Forward pass through the Transformer block.
 
         Args:
             x (Tensor): Input tensor of shape [batch, seq_len, hidden_size].
-
+        
         Returns:
-            Tensor: Output tensor of the same shape as input.
+            Tensor: Output tensor of same shape as input.
         """
         return self.transformer(x)

@@ -1,5 +1,6 @@
 """
-Defines the GeneralKnowledgeBackbone (GKB), a transformer-based module for general knowledge representation.
+Defines the GeneralKnowledgeBackbone (GKB) 
+A transformer-based module for general knowledge representation.
 """
 
 from typing import List
@@ -26,9 +27,11 @@ class GeneralKnowledgeBackbone(nn.Module):
         Forward pass through the transformer.
 
         Args:
-            domain_outputs (List[Tensor]): List of tensors, each of shape [batch, seq_len, hidden_size].
+            domain_outputs (List[Tensor]):
+                List of tensors, each of shape [batch, seq_len, hidden_size].
         Returns:
-            Tensor: Aggregated tensor of shape [batch, total_seq_len, hidden_size].
+            Tensor:
+                Aggregated tensor of shape [batch, total_seq_len, hidden_size].
         """
         x = torch.cat(domain_outputs, dim=1)
         return self.transformer(x)
