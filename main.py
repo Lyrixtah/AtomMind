@@ -14,7 +14,7 @@ from agents.critic import CriticAgent
 from agents.consensus import consensus
 from agents.trainer import TrainerAgent
 from utils.logger import Logger
-
+from utils.tokens import adjust_seq_len
 
 # Initialize modules
 logger = Logger()
@@ -81,14 +81,7 @@ for epoch in range(EPOCHS):
 
         # Tokenize science output
         tokens = tokenizer.encode(top_candidate, return_tensors="pt").to(DEVICE)
-        if tokens.size(1) > MAX_SEQ_LEN:
-            tokens = tokens[:, :MAX_SEQ_LEN]
-        elif tokens.size(1) < MAX_SEQ_LEN:
-            pad_len = MAX_SEQ_LEN - tokens.size(1)
-            tokens = torch.cat(
-                [tokens, torch.zeros(1, pad_len, dtype=torch.long).to(DEVICE)],
-                dim=1
-            )
+        tokens = adjust_seq_len(tokens, MAX_SEQ_LEN)
         input_tensor = embedding_layer(tokens)
         x_dict = {domain: input_tensor for domain in DOMAINS}
 
@@ -97,14 +90,7 @@ for epoch in range(EPOCHS):
         if TRAIN_CHAT and chat_examples:
             chat_text = chat_examples[i % len(chat_examples)]
             chat_tokens = tokenizer.encode(chat_text, return_tensors="pt").to(DEVICE)
-            if chat_tokens.size(1) > MAX_SEQ_LEN:
-                chat_tokens = chat_tokens[:, :MAX_SEQ_LEN]
-            elif chat_tokens.size(1) < MAX_SEQ_LEN:
-                pad_len = MAX_SEQ_LEN - chat_tokens.size(1)
-                chat_tokens = torch.cat(
-                    [chat_tokens, torch.zeros(1, pad_len, dtype=torch.long).to(DEVICE)],
-                    dim=1
-                )
+            chat_tokens = adjust_seq_len(chat_tokens, MAX_SEQ_LEN)
             chat_tensor = embedding_layer(chat_tokens)
 
         output = slm(x_dict, chat_tensor)
