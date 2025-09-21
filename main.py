@@ -93,7 +93,7 @@ for epoch in range(EPOCHS):
         x_dict = {domain: input_tensor for domain in DOMAINS}
 
         # Tokenize chat output
-        CHAT_TENSOR = None
+        chat_tensor = None
         if TRAIN_CHAT and chat_examples:
             chat_text = chat_examples[i % len(chat_examples)]
             chat_tokens = tokenizer.encode(chat_text, return_tensors="pt").to(DEVICE)
