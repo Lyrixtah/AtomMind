@@ -1,14 +1,15 @@
 """Consensus module for selecting the best candidate based on scores."""
 
+from typing import List, Union
 import numpy as np
 
-def consensus(candidates, scores):
+def consensus(candidates: List[str], scores: Union[List[float], np.ndarray]) -> str:
     """
     Select the candidate with the highest score.
 
     Args:
-        candidates (list[str]): List of generated candidate outputs.
-        scores (list[float] or np.ndarray): Corresponding evaluation scores.
+        candidates (List[str]): List of generated candidate outputs.
+        scores (List[float] | np.ndarray): Corresponding evaluation scores.
 
     Returns:
         str: The candidate with the highest score.
