@@ -1,5 +1,5 @@
 numpy==1.25.2; python_version < "3.12"
-numpy==1.26.4; python_version >= "3.12"
+numpy==2.3.3; python_version >= "3.12"
 
 transformers==4.56.2
 pytest==8.4.2
