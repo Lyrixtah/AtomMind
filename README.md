@@ -2,6 +2,9 @@
 
 <image src="docs/public/AtomMind.png" width="20%" height="20%"/>
 
+[![Pylint](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/pylint.yml/badge.svg)](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/pylint.yml)
+[![Python application](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/python-app.yml/badge.svg)](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/python-app.yml)
+
 **AtomMind** is a modular, domain-specialized **Small Language Model** designed to perform reasoning, and computation across **Mathematics, Physics, Chemistry, and Biology**. 
 
 *Unlike general-purpose LLMs, AtomMind just focuses on deep logical reasoning, symbolic computation, and cross-domain scientific problem-solving. Therefore it's lighter, dont cost much and more effective*
