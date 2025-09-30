@@ -1,28 +1,51 @@
 ```mermaid
-flowchart TD
+flowchart TB
 
-    %% Nodes
-    A[User Query]
-    B[Coordinator / Router / Agent]
-    C[Core SLM 5B - Reasoner]
-    D[External Memory System - Vector DB or Key-Value NN]
-    E[Specialized Sub-Nets - e.g. Med, Code]
-    F[Cross-Network Fusion - Attention + Aggregator]
-    G[Final Answer]
+    %% User Interaction
+    A[User Query / Input] --> B[Coordinator / Router Agent]
 
-    %% Edges
-    A --> B
-    B --> C
+    %% Core Model
+    B --> C[Core SLM 7B - Reasoner]
+
+    %% Memory System
+    subgraph D[Memory System]
+        D1[Short-Term Memory
+            KV Neural Net]
+        D2[Long-Term Memory
+            Vector DB / Knowledge Graph]
+    end
     B --> D
-    B --> E
-
     C <--> D
-    D <--> E
-    E <--> C
 
+    %% Specialized Subnets
+    subgraph E[Specialized Sub-Nets]
+        E1[Med-Net
+            Medical Knowledge]
+        E2[Code-Net
+            Programming/Math]
+        E3[Law-Net
+            Legal/Policy]
+        E4[Custom Domain Nets...]
+    end
+    B --> E
+    C <--> E
+    D <--> E
+
+    %% Fusion Layer
+    F[Cross-Network Fusion Layer
+        Attention + Confidence Aggregator]
     C --> F
     D --> F
     E --> F
 
-    F --> G
+    %% Final Output
+    F --> G[Final Answer / API Response]
+
+    %% API Layer
+    subgraph H[System API / Interface]
+        H1[/REST API/]
+        H2[/gRPC/]
+        H3[/Agent/Tool Plugins/]
+    end
+    G --> H
 ```
