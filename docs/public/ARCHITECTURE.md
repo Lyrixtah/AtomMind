@@ -18,14 +18,9 @@ flowchart TB
     C <--> D
 
     %% Specialized Subnets
-    subgraph E[Specialized Sub-Nets]
-        E1[Med-Net
-            Medical Knowledge]
-        E2[Code-Net
-            Programming/Math]
-        E3[Law-Net
-            Legal/Policy]
-        E4[Custom Domain Nets...]
+    subgraph E[Subnets]
+        E1[Maths, Scienctific]
+        E2[...]
     end
     B --> E
     C <--> E
